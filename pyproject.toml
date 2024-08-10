@@ -1,0 +1,23 @@
+[project]
+name = "flutter-copier"
+version = "0.1.0"
+description = "A tool to copy assets to flutter projects from figma zip downloads"
+authors = [{ name = "Juan Diego", email = "jdidelarc@gmail.com" }]
+dependencies = [
+    "typer>=0.12.3",
+    "watchfiles>=0.23.0",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+license = { text = "MIT" }
+
+[project.scripts]
+flutter-copier = "flutter_copier.cli:app"
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+version = { source = "file", path = "fastapi/__init__.py" }
+distribution = true
